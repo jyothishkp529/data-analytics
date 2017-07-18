@@ -22,8 +22,8 @@ Machine learning techniques can be used on top of historical data to get more ac
 
 ## Usage Instructions
 1. Build using maven 
-    ```mvn package```
+    ```mvn clean package```
 
 2. Excute utility
     ```cd target
-    java -jar weather-forecast-1.0.0-jar-with-dependencies.jar <optional args : no of days>```
+    java -jar weather-forecast-1.0.0-jar-with-dependencies.jar <optional args : no of days>
