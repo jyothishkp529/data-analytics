@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Class which has all the interfaces to the corresponding queries in this 
+	file and Time='#{status}' -->
+<mapper namespace="com.tcs.analytics.forecast.weather.dao.WeatherHistoryDao">
+
+	<resultMap type="weatherHistoryDo" id="resultMap_weatherHistoryDo" />
+	<select id="getHistoryWeatherData" parameterType="map"
+		resultType="list" resultMap="resultMap_weatherHistoryDo">
+		<![CDATA[
+			SELECT 	Location,Event, ReportingDate as Date,MinTemp,MaxTemp,Temp ,DewPoint 
+			FROM weatherhistory WHERE ReportingDate >=#{startDate} AND ReportingDate <=#{endDate}
+		]]>
+	</select>
+
+	<select id="getLocationBasedHistoricalWeather" parameterType="map"
+		resultType="list" resultMap="resultMap_weatherHistoryDo">
+		<![CDATA[
+			SELECT 	Location,Event, ReportingDate as Date ,MinTemp,MaxTemp,Temp,DewPoint 
+			FROM weatherhistory WHERE Location =#{location}
+		]]>
+	</select>
+</mapper>

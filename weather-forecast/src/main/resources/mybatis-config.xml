@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE
+ configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd"
+	>
+<configuration>
+
+	<typeAliases>
+		<typeAlias
+			type="com.tcs.analytics.forecast.weather.domain.WeatherStationDo"
+			alias="weatherStationDo" />
+		<typeAlias
+			type="com.tcs.analytics.forecast.weather.domain.WeatherHistoryDo"
+			alias="weatherHistoryDo" />
+	</typeAliases>
+
+	<!-- myBatis connection configurations with connection pooling -->
+	<environments default="UAT">
+		<environment id="UAT">
+
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="org.relique.jdbc.csv.CsvDriver" />
+				<property name="url" value="jdbc:relique:csv:./resources/" />
+				<property name="poolMaximumActiveConnections" value="4" />
+				<property name="poolMaximumIdleConnections" value="3" />
+
+			</dataSource>
+		</environment>
+	</environments>
+
+	<!-- myBatis mapper files with queries -->
+	<mappers>
+		<mapper resource="mapping/weather_station-mapping.xml" />
+		<mapper resource="mapping/weather_history-mapping.xml" />
+	</mappers>
+
+
+
+</configuration>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Class which has all the interfaces to the corresponding queries in this 
+	file -->
+<mapper namespace="com.tcs.analytics.forecast.weather.dao.WeatherStationDao">
+
+	<resultMap type="weatherStationDo" id="resultMap_weatherStationDo">
+	</resultMap>
+	
+
+	<select id="getAllWeatherStations" resultType="list" resultMap="resultMap_weatherStationDo">
+		SELECT name,stationCode,latitude,longitude,elevation from weatherstation
+	</select>
+
+<select id="getWeatherStation" resultMap="resultMap_weatherStationDo">
+		SELECT name,stationCode,latitude,longitude,elevation from weatherstation WHERE name = #{stationId}
+	</select>
+
+</mapper>
