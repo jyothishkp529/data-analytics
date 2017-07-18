@@ -2,10 +2,10 @@
 Weather Forecaster is a utility developed in Java to predict the weather conditions for the upcoming days. Historical weather data is considered to forecast the weather for the future dates.
 
 ## Approach
-The weather station and Historical weather data are stored in CSV file.  Historical weather of 2014 & 2015 are taken as base year. Weather history contains the Minimum &  Maximum temperatures of every day, DewPoint(DP), the temparature & Time at which the DP is recorded.  A csv based db query engine csvjdbc is used to query the csv files.  The time of the weather parameters is generated ramdomly. Other parameters like pressure, relative humidity and weather conditions are calculated with the temperature, elevation and other known parameters. This is finally encapsulated into the WetherForecast model and emitted in the below format.
+The weather station and Historical weather data are stored in CSV file.  Historical weather of 2014 & 2015 are taken as base years. Weather history contains the Minimum &  Maximum temperatures of every day, DewPoint(DP) & the Temparature at which the DP is recorded.  A csv based __Database query__ engine **csvjdbc** is used to query the csv files.  The time of the weather parameters is generated ramdomly. Other parameters like pressure, relative humidity and weather conditions are calculated with the temperature, elevation and other known parameters. This is finally encapsulated into the WetherForecast model and emitted in the below format.
 
 
-Eg: SYD|-33.865143|151.2099|2016-01-01T15:29:38Z|SUNNY|25.0|1012.8|55.0
+Eg: **SYD|-33.865143|151.2099|2016-01-01T15:29:38Z|SUNNY|25.0|1012.8|55.0**
 
 This approach is just to simulate a toy model of future environment from the base year’s weather data with a few set of basic paramters. Considering other parameters like climate changes, wind direction and other meteorological aspects to improve the accuracy of results. 
 
