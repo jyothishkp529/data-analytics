@@ -26,4 +26,4 @@ Machine learning techniques can be used on historical data to get more accurate 
 
 2. Excute utility
     ```cd target
-    java -jar weather-forecast-1.0.0-jar-with-dependencies.jar <<optional parameter :: no_of_days, Default is 1>>
+    java -jar weather-forecast-1.0.0-jar-with-dependencies.jar <<optional param :: no_of_days, Default is 1>>
