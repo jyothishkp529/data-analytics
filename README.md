@@ -7,7 +7,7 @@ The weather station and Historical weather data are stored in CSV file.  Histori
 
 Eg: **SYD|-33.865143|151.2099|2016-01-01T15:29:38Z|SUNNY|25.0|1012.8|55.0**
 
-This approach is just to simulate a toy model of future environment from the base year’s weather data with a few set of basic paramters. Considering other parameters like climate changes, wind direction and other meteorological aspects to improve the accuracy of results. 
+**Sliding Window Algorithm** is implemented to predict the future weather parameters. This approach is to simulate a toy model of future weather condition from the base year’s weather data with a few set of basic parameters. Considering other parameters like climate changes, wind direction and other meteorological aspects to improve the accuracy of results. 
 
 The calculation of Humidity and Event predictions need significant improvements. Current season’s average values for temperature and humidity can be considered to get more reasonable results.
 
