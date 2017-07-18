@@ -15,15 +15,15 @@ The calculation of Humidity and Event predictions need significant improvements.
 Machine learning techniques can be used on top of historical data to get more accurate results and also consider additional features to improve the accuracy.
 
 ## Technology Stack
-Java 8
-MyBatis
-Maven
-JUnit
+* Java 8
+* MyBatis
+* Maven
+* JUnit
 
 ## Usage Instructions
 1. Build using maven 
-	mvn package
+    ```mvn package```
 
 2. Excute utility
-	cd target
-	java -jar weather-forecast-1.0.0-jar-with-dependencies.jar <optional args : no of days>
+    ```cd target
+    java -jar weather-forecast-1.0.0-jar-with-dependencies.jar <optional args : no of days>```
